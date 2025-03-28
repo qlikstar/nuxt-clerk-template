@@ -16,12 +16,41 @@ import { CARDS } from '~/consts/cards'
         src="/images/logo.png"
       />
 
-      <div class="px-12 py-16 border-b border-[#F2F2F4]">
+      <!-- Top navigation bar with Sign In button in the top right -->
+      <div class="px-12 py-6 border-b border-[#F2F2F4] flex justify-between items-center">
         <div class="bg-[#F4F4F5] px-4 py-3 rounded-full inline-flex gap-4">
           <ClerkLogo />
           <div aria-hidden class="w-px h-6 bg-[#C7C7C8]" />
           <NuxtLogo />
         </div>
+        
+        <!-- Sign In button in the top right -->
+        <SignedOut>
+          <SignInButton class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold hover:bg-gray-800 transition-colors">
+            Sign In
+          </SignInButton>
+        </SignedOut>
+        
+        <!-- Show Dashboard link and UserButton if signed in -->
+        <SignedIn>
+          <div class="flex items-center gap-4">
+            <NuxtLink
+              href="/dashboard"
+              class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold hover:bg-gray-800 transition-colors"
+            >
+              Dashboard
+            </NuxtLink>
+            <UserButton
+              :appearance="{
+                elements: {
+                  userButtonAvatarBox: 'size-9',
+                  userButtonTrigger: 'border border-gray-200 rounded-full p-1 hover:border-gray-300 bg-white shadow-sm',
+                  userButtonPopoverCard: 'shadow-lg',
+                },
+              }"
+            />
+          </div>
+        </SignedIn>
       </div>
 
       <div class="p-10 border-b border-[#F2F2F2]">
@@ -36,36 +65,24 @@ import { CARDS } from '~/consts/cards'
           management powered by Clerk.
         </p>
         <div class="relative flex gap-3">
-          <SignedIn>
-            <NuxtLink
-              href="/dashboard"
-              class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold"
-            >
-              Dashboard
-            </NuxtLink>
-          </SignedIn>
-          <SignedOut>
-            <SignInButton class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold">
-              Sign In
-            </SignInButton>
-          </SignedOut>
+          <!-- Removed the Sign In button from here -->
           <NuxtLink
             href="/#features"
-            class="px-4 py-2 rounded-full text-[#131316] text-sm font-semibold bg-[#F7F7F8]"
+            class="px-4 py-2 rounded-full text-[#131316] text-sm font-semibold bg-[#F7F7F8] hover:bg-gray-200 transition-colors"
           >
             Learn more
           </NuxtLink>
         </div>
       </div>
       <div class="flex gap-8 w-full h-[41.25rem] scale-[1.03]">
-        <div class="space-y-8 translate-y-12">
+        <!-- <div class="space-y-8 translate-y-12">
           <NuxtImg
             alt="Device"
             src="/images/sign-up@2xrl.webp"
             class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
           />
-        </div>
-        <div class="space-y-8 -translate-y-4">
+        </div> -->
+        <!-- <div class="space-y-8 -translate-y-4">
           <NuxtImg
             alt="Device"
             src="/images/verify@2xrl.webp"
@@ -76,8 +93,8 @@ import { CARDS } from '~/consts/cards'
             src="/images/user-button-2@2xrl.webp"
             class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
           />
-        </div>
-        <div class="space-y-8 -translate-y-[22.5rem]">
+        </div> -->
+        <!-- <div class="space-y-8 -translate-y-[22.5rem]">
           <NuxtImg
             alt="Device"
             src="/images/sign-in@2xrl.webp"
@@ -88,7 +105,7 @@ import { CARDS } from '~/consts/cards'
             src="/images/user-button@2xrl.webp"
             class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
           />
-        </div>
+        </div> -->
       </div>
     </div>
     <div
