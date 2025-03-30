@@ -54,14 +54,14 @@ import { CARDS } from '~/consts/cards'
       </div>
 
       <div class="p-10 border-b border-[#F2F2F2]">
-        <h1 class="text-5xl font-bold tracking-tight text-[#131316] relative">
-          Auth starts here
+        <h1 class="text-4xl font-bold tracking-tight text-[#131316] relative">
+          Auth Clerk Template with Nuxt.js (Vue)
         </h1>
 
         <p
           class="text-[#5E5F6E] pt-3 pb-6 max-w-[30rem] text-[1.0625rem] relative"
         >
-          A simple and powerful Nuxt template featuring authentication and user
+          A simple and powerful Nuxt.js (Vue) template featuring authentication and user
           management powered by Clerk.
         </p>
         <div class="relative flex gap-3">
