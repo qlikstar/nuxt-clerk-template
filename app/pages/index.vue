@@ -3,7 +3,7 @@ import { CARDS } from '~/consts/cards'
 </script>
 
 <template>
-  <main class="bg-[#FAFAFA] relative">
+  <main class="relative grid grid-rows-[auto,1fr,auto] min-h-screen">
     <div
       class="w-full bg-white max-w-[75rem] mx-auto flex flex-col border-l border-r border-[#F2F2F2] row-span-3"
     >
@@ -55,17 +55,15 @@ import { CARDS } from '~/consts/cards'
 
       <div class="p-10 border-b border-[#F2F2F2]">
         <h1 class="text-4xl font-bold tracking-tight text-[#131316] relative">
-          Auth Clerk Template with Nuxt.js (Vue)
+          Modern Web Development Stack
         </h1>
 
         <p
           class="text-[#5E5F6E] pt-3 pb-6 max-w-[30rem] text-[1.0625rem] relative"
         >
-          A simple and powerful Nuxt.js (Vue) template featuring authentication and user
-          management powered by Clerk.
+          A powerful tech stack combining Vue.js, Nuxt, and Clerk Authentication for building secure, scalable, and user-friendly web applications.
         </p>
         <div class="relative flex gap-3">
-          <!-- Removed the Sign In button from here -->
           <NuxtLink
             href="/#features"
             class="px-4 py-2 rounded-full text-[#131316] text-sm font-semibold bg-[#F7F7F8] hover:bg-gray-200 transition-colors"
@@ -74,38 +72,112 @@ import { CARDS } from '~/consts/cards'
           </NuxtLink>
         </div>
       </div>
-      <div class="flex gap-8 w-full h-[41.25rem] scale-[1.03]">
-        <!-- <div class="space-y-8 translate-y-12">
-          <NuxtImg
-            alt="Device"
-            src="/images/sign-up@2xrl.webp"
-            class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
-          />
-        </div> -->
-        <!-- <div class="space-y-8 -translate-y-4">
-          <NuxtImg
-            alt="Device"
-            src="/images/verify@2xrl.webp"
-            class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
-          />
-          <NuxtImg
-            alt="Device"
-            src="/images/user-button-2@2xrl.webp"
-            class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
-          />
-        </div> -->
-        <!-- <div class="space-y-8 -translate-y-[22.5rem]">
-          <NuxtImg
-            alt="Device"
-            src="/images/sign-in@2xrl.webp"
-            class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
-          />
-          <NuxtImg
-            alt="Device"
-            src="/images/user-button@2xrl.webp"
-            class="flex-none rounded-xl bg-white shadow-[0_5px_15px_rgba(0,0,0,0.08),0_15px_35px_-5px_rgba(25,28,33,0.2)] ring-1 ring-gray-950/5"
-          />
-        </div> -->
+
+      <!-- Technology Stack Section -->
+      <div class="p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Vue.js Card -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-[#F2F2F4] hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-100 p-3 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
+            </div>
+            <h2 class="text-xl font-semibold ml-3 text-[#131316]">Vue.js</h2>
+          </div>
+          <p class="text-[#5E5F6E] mb-4">
+            A progressive JavaScript framework for building user interfaces. Vue.js is designed to be incrementally adoptable and can easily scale between a library and a full-featured framework.
+          </p>
+          <ul class="space-y-2 text-[#5E5F6E]">
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Reactive and composable component system
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Virtual DOM for efficient updates
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Gentle learning curve and excellent documentation
+            </li>
+          </ul>
+        </div>
+
+        <!-- Nuxt Card -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-[#F2F2F4] hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-100 p-3 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+            </div>
+            <h2 class="text-xl font-semibold ml-3 text-[#131316]">Nuxt</h2>
+          </div>
+          <p class="text-[#5E5F6E] mb-4">
+            An intuitive Vue framework that offers server-side rendering, static site generation, and more out of the box. Nuxt simplifies the development of Vue applications with its convention-over-configuration approach.
+          </p>
+          <ul class="space-y-2 text-[#5E5F6E]">
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Automatic routing based on file structure
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Server-side rendering for better SEO
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Built-in state management and API fetching
+            </li>
+          </ul>
+        </div>
+
+        <!-- Clerk Authentication Card -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-[#F2F2F4] hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-100 p-3 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h2 class="text-xl font-semibold ml-3 text-[#131316]">Clerk Authentication</h2>
+          </div>
+          <p class="text-[#5E5F6E] mb-4">
+            A complete authentication and user management solution that provides secure, customizable sign-in flows. Clerk handles everything from sign-up to account management.
+          </p>
+          <ul class="space-y-2 text-[#5E5F6E]">
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Multi-factor authentication
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Social login providers
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 mr-2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              User management dashboard
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Getting Started Section -->
+      <div class="p-10 border-t border-[#F2F2F2]">
+        <h2 class="text-2xl font-bold tracking-tight text-[#131316] mb-6">Getting Started</h2>
+        <div class="bg-[#F7F7F8] p-6 rounded-lg">
+          <pre class="text-sm text-[#131316] overflow-x-auto"><code>
+# Clone this repository
+git clone https://github.com/your-username/nuxt-clerk-template.git
+
+# Navigate to the project directory
+cd nuxt-clerk-template
+
+# Install dependencies
+npm install
+
+# Set up your Clerk environment variables
+# Create a .env file with your Clerk keys
+
+# Start the development server
+npm run dev
+          </code></pre>
+        </div>
       </div>
     </div>
     <div
